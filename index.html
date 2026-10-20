@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Básico -->
+  <title>Casa Maluart | Corralón de Materiales de Construcción en Guernica</title>
+  <meta name="description" content="Más de 30 años en el rubro de materiales de construcción. Obra gruesa, áridos, cemento, hierro y ladrillos con envío a obra. Av. Arturo Jauretche 906, Guernica.">
+  <link rel="canonical" href="https://casamaluart.tiiny.site/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://casamaluart.tiiny.site/">
+  <meta property="og:title" content="Casa Maluart | Materiales de Construcción">
+  <meta property="og:description" content="Más de 30 años abasteciendo obras. Venta de materiales de construcción para profesionales y particulares. Envíos directos a obra y acopio.">
+  <meta property="og:image" content="hero.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "Casa Maluart Materiales",
+    "image": "hero.jpg",
+    "description": "Corralón de materiales de construcción con más de 30 años de trayectoria en Guernica.",
+    "url": "https://casamaluart.tiiny.site/",
+    "telephone": "+541122549299",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Arturo Jauretche 906",
+      "addressLocality": "Guernica",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "15:00"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #F8FAFC;
+      --bg-surface: #F1F5F9;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --primary: #DC2626;        /* Redefinido al rojo distintivo del logo */
+      --primary-hover: #B91C1C;
+      --dark-banner: #1E293B;
+      --whatsapp-color: #25D366;
+      --whatsapp-hover: #1EBE5D;
+      --border: #E2E8F0;
+      --focus-ring: #DC2626;
+      
+      --font-heading: 'Chakra Petch', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      
+      --transition: all 0.25s ease-in-out;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+      text-transform: uppercase;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border-color: var(--dark-banner);
+      color: var(--dark-banner);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--dark-banner);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp-color);
+      color: #FFFFFF;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--whatsapp-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    /* BOTÓN FLOTANTE WHATSAPP CON PULSO */
+    .btn-whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--whatsapp-color);
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      transition: var(--transition);
+      animation: pulse-ring 2s infinite;
+    }
+
+    .btn-whatsapp-float:hover {
+      background-color: var(--whatsapp-hover);
+      transform: scale(1.1);
+    }
+
+    .btn-whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo-img {
+      max-height: 55px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3.5rem 0 4.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #FEE2E2;
+      color: var(--primary-hover);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.15;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-img {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      width: 100%;
+      max-height: 420px;
+    }
+
+    /* CATEGORÍAS */
+    .categories {
+      background-color: var(--bg-surface);
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .category-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+    }
+
+    .category-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .category-content {
+      padding: 1.25rem;
+    }
+
+    .category-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-content p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* BENEFICIOS */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      background: var(--bg-card);
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      transition: var(--transition);
+    }
+
+    .benefit-card:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .benefit-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* CONTACTO Y UBICACIÓN */
+    .contact-section {
+      background-color: var(--bg-surface);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-info {
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark-banner);
+    }
+
+    .info-item {
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-value {
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+
+    .hours-table {
+      width: 100%;
+      margin-top: 0.5rem;
+      border-collapse: collapse;
+    }
+
+    .hours-table td {
+      padding: 0.35rem 0;
+      font-size: 1rem;
+    }
+
+    .hours-table td:last-child {
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* TESTIMONIOS */
+    .testimonials {
+      background-color: var(--dark-banner);
+      color: #FFFFFF;
+    }
+
+    .testimonials .section-title h2 { color: #FFFFFF; }
+    .testimonials .section-title p { color: #94A3B8; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background-color: #334155;
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid #475569;
+    }
+
+    .quote {
+      font-size: 0.95rem;
+      color: #E2E8F0;
+      margin-bottom: 1.25rem;
+    }
+
+    .author {
+      font-weight: 700;
+      color: #F87171;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    /* FAQ */
+    .faq-container {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.85rem;
+    }
+
+    .faq-title {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-content {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      display: none;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-content { display: block; }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+    /* CTA FINAL */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--dark-banner) 0%, #0F172A 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .cta-banner h2 {
+      color: #FFFFFF;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-banner p {
+      color: #94A3B8;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ANIMACIONES */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/541122549299?text=Hola!%20Me%20comunico%20desde%20la%20web%20para%20solicitar%20informaci%C3%B3n" class="btn-whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32">
+      <path d="M16 2a13 13 0 0 0-11.25 19.53L3 29l7.73-1.7A13 13 0 1 0 16 2zm0 23.86a10.8 10.8 0 0 1-5.52-1.51l-.4-.24-4.58 1 1-4.47-.26-.42A10.86 10.86 0 1 1 16 25.86zm5.94-8.13c-.33-.16-1.93-.95-2.23-1.06s-.52-.16-.74.16-.85 1.06-1.05 1.28-.39.25-.72.08a9.17 9.17 0 0 1-2.69-1.66 10.15 10.15 0 0 1-1.86-2.32c-.2-.33 0-.5.16-.67s.33-.39.49-.58.22-.33.33-.55.05-.41-.03-.58-.74-1.79-1-2.45c-.27-.64-.55-.55-.74-.56h-.63a1.21 1.21 0 0 0-.88.41A3.69 3.69 0 0 0 7.7 10.3c0 2.18 1.59 4.29 1.81 4.59s3.13 4.78 7.59 6.7c1.06.46 1.89.73 2.54.94a6.1 6.1 0 0 0 2.8.18 4.58 4.58 0 0 0 3-2.12 3.73 3.73 0 0 0 .26-2.12c-.11-.18-.38-.28-.71-.44z"/>
+    </svg>
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo-link" aria-label="Inicio Casa Maluart">
+        <img src="logo.jpg" alt="Casa Maluart" class="logo-img">
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#rubros">Categorías</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto y Ubicación</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/541122549299?text=Hola!%20Me%20comunico%20desde%20la%20web%20para%20solicitar%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Pedir Cotización</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <span class="badge">Más de 30 años de experiencia</span>
+          <h1>Todo para tu obra, desde la base hasta los detalles</h1>
+          <p>En <strong>Casa Maluart</strong> llevamos más de 30 años abasteciendo a constructoras y particulares. Cemento, cal, hierro, áridos y ladrillos con entrega directa en obra y acopio.</p>
+          <div class="hero-buttons">
+            <a href="https://wa.me/541122549299?text=Hola!%20Me%20comunico%20desde%20la%20web%20para%20solicitar%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-whatsapp">Cotizar por WhatsApp</a>
+            <a href="#rubros" class="btn btn-secondary">Ver Catálogo de Rubros</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper fade-in">
+          <img src="hero.jpg" alt="Flota de camiones y materiales de Casa Maluart" class="hero-img" width="800" height="420">
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS DE PRODUCTOS -->
+    <section id="rubros" class="categories">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Nuestros Rubros Principales</h2>
+          <p>Trabajamos con las marcas líderes del mercado respaldados por más de 30 años de trayectoria.</p>
+        </div>
+        <div class="categories-grid">
+          
+          <article class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=500&q=80" alt="Bolsas de cemento y cal" class="category-img" loading="lazy">
+            <div class="category-content">
+              <h3>Obra Gruesa</h3>
+              <p>Cemento, cal, pastina, adhesivos y ligantes para mampostería y estructura.</p>
+            </div>
+          </article>
+
+          <article class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80" alt="Barras de hierro para construcción" class="category-img" loading="lazy">
+            <div class="category-content">
+              <h3>Hierros y Mallas</h3>
+              <p>Hierro torsionado en todas las medidas, mallas sima, alambres y estribos.</p>
+            </div>
+          </article>
+
+          <article class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=500&q=80" alt="Ladrillos cerámicos y bloques" class="category-img" loading="lazy">
+            <div class="category-content">
+              <h3>Ladrillos y Bloques</h3>
+              <p>Ladrillos huecos, portantes, comunes y bloques de hormigón celular.</p>
+            </div>
+          </article>
+
+          <article class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1578885136359-16c8bd4d3a8e?auto=format&fit=crop&w=500&q=80" alt="Áridos arena y piedra a granel" class="category-img" loading="lazy">
+            <div class="category-content">
+              <h3>Áridos a Granel</h3>
+              <p>Arena fina, gruesa, piedra partida y cascote limpio en bolsones o m³.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="servicios" class="container">
+      <div class="section-title fade-in">
+        <h2>Ventajas de Operar con Casa Maluart</h2>
+        <p>Experiencia, solidez y logística pensadas para que tu obra nunca se detenga.</p>
+      </div>
+      <div class="benefits-grid">
+        <article class="benefit-card fade-in">
+          <h3>+30 Años en el Rubro</h3>
+          <p>Conocimiento profundo del mercado para brindarte el mejor asesoramiento en cada etapa constructiva.</p>
+        </article>
+
+        <article class="benefit-card fade-in">
+          <h3>Envíos a Obra</h3>
+          <p>Logística y flota preparada para realizar entregas ágiles directamente en tu construcción.</p>
+        </article>
+
+        <article class="benefit-card fade-in">
+          <h3>Acopio Garantizado</h3>
+          <p>Comprás hoy, congelás el precio frente a los aumentos y retirás a medida que la obra lo requiera.</p>
+        </article>
+
+        <article class="benefit-card fade-in">
+          <h3>Cuentas Corrientes</h3>
+          <p>Atención personalizada y facilidades comerciales para empresas constructoras y profesionales.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO Y UBICACIÓN -->
+    <section id="contacto" class="contact-section">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Contacto y Ubicación</h2>
+          <p>Visítanos en nuestra sucursal o comunícate directamente con nuestro equipo de ventas.</p>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-info fade-in">
+            <h3>Casa Maluart</h3>
+            
+            <div class="info-item">
+              <span class="info-label">Dirección</span>
+              <span class="info-value">Av. Arturo Jauretche 906, Guernica, Buenos Aires</span>
+            </div>
+
+            <div class="info-item">
+              <span class="info-label">Teléfono Fijo</span>
+              <span class="info-value"><a href="tel:01121217743">011 2121-7743</a></span>
+            </div>
+
+            <div class="info-item">
+              <span class="info-label">WhatsApp Ventas</span>
+              <span class="info-value"><a href="https://wa.me/541122549299?text=Hola!%20Me%20comunico%20desde%20la%20web%20para%20solicitar%20informaci%C3%B3n" target="_blank" rel="noopener">11 2254-9299</a></span>
+            </div>
+
+            <div class="info-item">
+              <span class="info-label">Horarios de Atención</span>
+              <table class="hours-table">
+                <tr>
+                  <td>Lunes a Viernes</td>
+                  <td>08:00 a 17:30 hs</td>
+                </tr>
+                <tr>
+                  <td>Sábados</td>
+                  <td>08:00 a 15:00 hs</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="map-container fade-in">
+            <iframe 
+              title="Ubicación de Casa Maluart en Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.84888998816!2d-58.38423432342514!3d-34.91024317482813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd46271a0ea4d%3A0xb35515df2dfb7b13!2sAv.%20Arturo%20Jauretche%20906%2C%20B1862%20Guernica%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Constructores que Confían en Casa Maluart</h2>
+          <p>Nuestra trayectoria de más de 30 años en la zona nos respalda.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card fade-in">
+            <p class="quote">"Compro en Casa Maluart desde hace años. La atención en Jauretche siempre es excelente y la entrega en obra cumple los tiempos."</p>
+            <cite class="author">— Ing. Eduardo Morales</cite>
+          </blockquote>
+
+          <blockquote class="testimonial-card fade-in">
+            <p class="quote">"El servicio de acopio nos dio la tranquilidad de congelar valores al arrancar la obra. Un corralón con historia y cumplimiento."</p>
+            <cite class="author">— Arq. Valenzuela & Asociados</cite>
+          </blockquote>
+
+          <blockquote class="testimonial-card fade-in">
+            <p class="quote">"Envío la lista de materiales por WhatsApp y al toque me responden con la cotización. Súper práctico para el día a día."</p>
+            <cite class="author">— Roberto Gómez (Maestro Mayor de Obra)</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="container">
+      <div class="section-title fade-in">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos tus dudas antes de realizar tu pedido.</p>
+      </div>
+      <div class="faq-container">
+        
+        <div class="faq-item fade-in">
+          <button class="faq-title" aria-expanded="false">
+            <span>¿Cómo solicito un presupuesto de materiales?</span>
+            <span class="faq-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-content">
+            <p>Escríbenos por WhatsApp al 11 2254-9299 con tu lista o cómputo de materiales y te enviaremos la cotización detallada a la brevedad.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-title" aria-expanded="false">
+            <span>¿Cuáles son los horarios de atención en el local?</span>
+            <span class="faq-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-content">
+            <p>Atendemos de Lunes a Viernes de 08:00 a 17:30 hs y los Sábados de 08:00 a 15:00 hs en Av. Arturo Jauretche 906, Guernica.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-title" aria-expanded="false">
+            <span>¿Ofrecen servicio de acopio de materiales?</span>
+            <span class="faq-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-content">
+            <p>Sí, con nuestro servicio de acopio podés congelar los precios comprando hoy y retirar el material a medida que lo requieras en la obra.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="container">
+      <div class="cta-banner fade-in">
+        <h2>¿Tenés la lista de materiales para tu obra?</h2>
+        <p>Escríbenos por WhatsApp al 11 2254-9299 y recibí el asesoramiento de nuestros más de 30 años en el rubro.</p>
+        <a href="https://wa.me/541122549299?text=Hola!%20Me%20comunico%20desde%20la%20web%20para%20solicitar%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-whatsapp">Cotizar por WhatsApp Ahora</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Casa Maluart Materiales de Construcción. Av. Arturo Jauretche 906, Guernica. Tel: 011 2121-7743.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('.faq-title');
+        button.addEventListener('click', () => {
+          const isOpen = item.classList.contains('active');
+          faqItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-title').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('active');
+            button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Scroll Fade-in Animation
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
